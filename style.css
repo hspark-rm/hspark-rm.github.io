@@ -1,0 +1,200 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5f6368;
+  --rule: #e3e3e0;
+  --accent: #7a2e2e;
+  --accent-soft: #f7f2f2;
+  --max: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --fg: #e8e6e3;
+    --muted: #a0a4ab;
+    --rule: #2b2f36;
+    --accent: #d99b9b;
+    --accent-soft: #1e2126;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Charter", "Iowan Old Style", Georgia, "Noto Serif KR", serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+/* ---------- header ---------- */
+
+header {
+  padding: 56px 0 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.affil {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+nav {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+  margin: 24px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  font-size: 0.9rem;
+}
+
+nav a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+nav a:hover { border-bottom-color: var(--accent); }
+nav a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------- type ---------- */
+
+h2 {
+  font-size: 1.05rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 48px 0 16px;
+  font-weight: 600;
+}
+
+h2:first-of-type { margin-top: 0; }
+
+h3 {
+  font-size: 1.05rem;
+  margin: 28px 0 8px;
+  font-weight: 600;
+}
+
+p { margin: 0 0 16px; }
+
+a { color: var(--accent); }
+
+.lede { font-size: 1.05rem; }
+
+/* ---------- portrait ---------- */
+
+.intro {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.intro img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: var(--accent-soft);
+}
+
+@media (max-width: 560px) {
+  .intro { flex-direction: column; gap: 20px; }
+  .intro img { width: 130px; height: 130px; }
+  body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+}
+
+/* ---------- publications ---------- */
+
+.year {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 36px 0 12px;
+  font-weight: 600;
+}
+
+ol.pubs { list-style: none; padding: 0; margin: 0; counter-reset: none; }
+
+ol.pubs li {
+  margin: 0 0 22px;
+  padding-left: 0;
+}
+
+.pub-title { font-weight: 600; }
+.venue { font-style: italic; }
+.me { font-weight: 700; }
+
+.tag {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.doi {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+}
+
+/* ---------- misc ---------- */
+
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { margin-bottom: 8px; }
+.contact-list span {
+  display: inline-block;
+  min-width: 108px;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+}
+
+.note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-left: 2px solid var(--rule);
+  padding-left: 14px;
+  margin: 24px 0;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding-top: 20px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
