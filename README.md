@@ -30,13 +30,13 @@ GitHub에서 새 저장소를 만듭니다. **이름은 반드시 `<사용자명
 이 폴더에서:
 
 ```bash
-cd ~/Documents/hspark-website && git init -b main && git add -A && git commit -m "Initial site"
+cd ~/Developer/hspark-website && git init -b main && git add -A && git commit -m "Initial site"
 ```
 
 원격 연결 후 push (`<사용자명>` 교체):
 
 ```bash
-cd ~/Documents/hspark-website && git remote add origin https://github.com/<사용자명>/<사용자명>.github.io.git && git push -u origin main
+cd ~/Developer/hspark-website && git remote add origin https://github.com/<사용자명>/<사용자명>.github.io.git && git push -u origin main
 ```
 
 push 할 때 GitHub 로그인을 물으면 브라우저 인증을 따르면 됩니다. 비밀번호 대신 토큰을 요구하면
@@ -55,7 +55,7 @@ Settings → Developer settings → Personal access tokens 에서 발급합니�
 파일 고치고:
 
 ```bash
-cd ~/Documents/hspark-website && git add -A && git commit -m "Update" && git push
+cd ~/Developer/hspark-website && git add -A && git commit -m "Update" && git push
 ```
 
 ---
@@ -63,7 +63,7 @@ cd ~/Documents/hspark-website && git add -A && git commit -m "Update" && git pus
 ## 로컬 미리보기
 
 ```bash
-cd ~/Documents/hspark-website && python3 -m http.server 8000
+cd ~/Developer/hspark-website && python3 -m http.server 8000
 ```
 
 → http://localhost:8000
