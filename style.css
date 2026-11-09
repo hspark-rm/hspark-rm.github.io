@@ -198,3 +198,5 @@ footer {
   color: var(--muted);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.pubs .accepted { color: #666; white-space: nowrap; }
